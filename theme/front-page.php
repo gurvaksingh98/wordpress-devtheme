@@ -1,72 +1,52 @@
 <?php get_header(); ?>
 
-<!-- HERO -->
 <section class="hero">
-    <div class="hero-content">
-        <h1>Build. Learn. Deploy.</h1>
-        <p>Self-hosted. Self-built. Self-owned.</p>
-        <a href="#about" class="btn">Learn More</a>
+    <div class="container">
+        <h1>Full Stack Developer & Infrastructure Builder</h1>
+        <p>I design, build, and deploy scalable systems — from code to production.</p>
+        <a href="#projects" class="btn">View Projects</a>
     </div>
 </section>
 
-<!-- ABOUT -->
-<section id="about" class="section container">
-    <h2>About Me</h2>
-    <p>
-        I am building my own infrastructure and learning full stack
-        development, DevOps and system architecture.
-    </p>
+<section class="about">
+    <div class="container">
+        <h2>About Me</h2>
+        <p>
+            I build self-hosted infrastructure, develop full stack applications,
+            and focus on DevOps automation and scalable system architecture.
+        </p>
+    </div>
 </section>
 
-<!-- SERVICES -->
-<section class="section light-bg">
+<section id="projects" class="projects">
     <div class="container">
-        <h2>What I Do</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Web Development</h3>
-                <p>Custom WordPress and modern web apps.</p>
+        <h2>Projects</h2>
+        <div class="project-grid">
+
+            <div class="project-card">
+                <h3>Self Hosted WordPress</h3>
+                <p>Custom theme deployed through Git on Proxmox infrastructure.</p>
             </div>
-            <div class="card">
-                <h3>DevOps</h3>
-                <p>Docker, CI/CD, Infrastructure automation.</p>
+
+            <div class="project-card">
+                <h3>DevOps Lab</h3>
+                <p>Containerized services running on my personal server cluster.</p>
             </div>
-            <div class="card">
-                <h3>Self Hosting</h3>
-                <p>Running everything on my own servers.</p>
+
+            <div class="project-card">
+                <h3>Full Stack App</h3>
+                <p>Custom-built web applications with deployment automation.</p>
             </div>
+
         </div>
     </div>
 </section>
 
-<!-- BLOG -->
-<section class="section container">
-    <h2>Latest Posts</h2>
-
-    <div class="grid">
-        <?php
-        $query = new WP_Query(array('posts_per_page' => 3));
-
-        if ($query->have_posts()) :
-            while ($query->have_posts()) : $query->the_post();
-        ?>
-
-            <div class="card">
-                <?php if (has_post_thumbnail()) : ?>
-                    <?php the_post_thumbnail('medium'); ?>
-                <?php endif; ?>
-                <h3><?php the_title(); ?></h3>
-                <p><?php the_excerpt(); ?></p>
-                <a href="<?php the_permalink(); ?>">Read More</a>
-            </div>
-
-        <?php
-            endwhile;
-            wp_reset_postdata();
-        else :
-            echo "<p>No posts yet.</p>";
-        endif;
-        ?>
+<section class="contact">
+    <div class="container">
+        <h2>Let’s Work Together</h2>
+        <p>Interested in collaborating or building something powerful?</p>
+        <a href="mailto:your@email.com" class="btn">Contact Me</a>
     </div>
 </section>
 

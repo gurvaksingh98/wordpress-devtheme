@@ -1,6 +1,6 @@
 <footer class="site-footer">
     <div class="container">
-        <p>© <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. All rights reserved.</p>
+        <p>© <?php echo date('Y'); ?> Gurvak Singh — Built & Self Hosted.</p>
     </div>
 </footer>
 

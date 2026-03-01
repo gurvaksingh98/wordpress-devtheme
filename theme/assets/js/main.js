@@ -1,1 +1,1 @@
-console.log("DevTheme loaded.");
+console.log("Portfolio Loaded");
